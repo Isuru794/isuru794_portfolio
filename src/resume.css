@@ -1,0 +1,42 @@
+.resume-section {
+    background-color: #151524;
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .resume-title {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #ffb627;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .resume-image {
+    width: 100%;
+    max-width: 800px;
+    border: 2px solid #ffffff;
+    
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .download-btn {
+    background-color: #ffb627;
+    color: #151524;
+    padding: 12px 44px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+  }
+  
+  .download-btn:hover {
+    background-color: #ffffff;
+  }
+  

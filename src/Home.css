@@ -1,0 +1,525 @@
+
+
+/* Prevent horizontal scrolling */
+body, html, #root, .App {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Hero Section */
+
+/* Career Section */
+.career-section {
+  background-color: #151524;
+  padding: 6rem 2rem;
+  color: #fff;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+.career-heading {
+  font-size: 2.5rem;
+  color: #ffb627;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  position: relative;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+}
+
+.career-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.career-item {
+  background: #262132;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 450px;
+  height: 130px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.career-year {
+  background: #ffb627;
+  color: #151524;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  position: absolute;
+  top: -1rem;
+  left: -3rem;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px rgba(255, 182, 39, 0.5);
+}
+
+.career-details h3 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.career-details p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+.connector-line {
+  position: absolute;
+  left: -5px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: #ffb627;
+  opacity: 0.9;
+}
+
+.career-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-wrap: wrap;
+  padding: 3rem 0;
+}
+
+.career-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  min-width: 300px;
+}
+
+/* Text Animation */
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Skills Section */
+.skills-map {
+  padding: 60px 20px;
+  background: #151524;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.skills-heading {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffb627;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+}
+
+.skills-map-container {
+  position: relative;
+  min-height: 300px;
+  padding: 60px 20px;
+}
+
+.center-node {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  background: #ffb627;
+  color: #1e1e2f;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px #ffb62799;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.skills-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #ffb627;
+  z-index: 0;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.frontend-main {
+  left: 25%;
+  top: 40%;
+}
+
+.backend-main {
+  right: 25%;
+  top: 40%;
+}
+
+.skill-item {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  border-radius: 0%;
+  padding: -2px;
+  z-index: 1;
+  transition: transform 0.3s;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+}
+
+.skill-item:hover {
+  transform: scale(1.2);
+}
+
+/* Individual skill delays for smooth sequence */
+.skill-html { left: 15%; top: 20%; animation-delay: 0.5s; }
+.skill-css { left: 10%; top: 50%; animation-delay: 0.6s; }
+.skill-js { left: 20%; top: 70%; animation-delay: 0.7s; }
+.skill-react { left: 35%; top: 20%; animation-delay: 0.8s; }
+.skill-bootstrap { left: 40%; top: 60%; animation-delay: 0.9s; }
+
+.skill-node { right: 15%; top: 20%; animation-delay: 1s; }
+.skill-express { right: 10%; top: 50%; animation-delay: 1.1s; }
+.skill-mysql { right: 20%; top: 70%; animation-delay: 1.2s; }
+.skill-php { right: 35%; top: 20%; animation-delay: 1.3s; }
+.skill-api { right: 40%; top: 60%; animation-delay: 1.4s; }
+.skill-laravel { right: 37%; top: 75%; animation-delay: 1.5s; }
+
+/* Text Animation */
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+  .skills-map-container {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    min-height: auto;
+  }
+
+  .skills-divider {
+    display: none;
+  }
+
+  .center-node {
+    position: static;
+    margin: 20px auto 10px;
+    font-size: 1.2rem;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .skill-item {
+    position: static;
+    width: 70px;
+    height: 70px;
+    animation: none;
+    opacity: 1;
+  }
+  
+  .skill-html, .skill-css, .skill-js, .skill-react, .skill-bootstrap,
+  .skill-node, .skill-express, .skill-mysql, .skill-php, .skill-api, .skill-laravel {
+    left: auto;
+    right: auto;
+    top: auto;
+    animation-delay: 0s;
+  }
+  
+  .frontend-skills,
+  .backend-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Soft Skills Section */
+.soft-skills-section {
+  background-color: #151524;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.section-heading {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffb627;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+}
+
+.toggle-btn {
+  background-color: #ffb627;
+  color: #151524;
+  padding: 12px 28px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.toggle-btn:hover {
+  background-color: #ffffff;
+  color: #151524;
+  transform: translateY(-2px);
+}
+
+.soft-skills-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+  margin: 0 auto;
+}
+
+.soft-skills-content.show {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-bottom: 20px;
+}
+
+.soft-skills-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.soft-skills-content li {
+  background-color: #262132;
+  color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  flex: 1 1 200px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+}
+
+.soft-skills-content li:nth-child(1) { animation-delay: 0.3s; }
+.soft-skills-content li:nth-child(2) { animation-delay: 0.4s; }
+.soft-skills-content li:nth-child(3) { animation-delay: 0.5s; }
+.soft-skills-content li:nth-child(4) { animation-delay: 0.6s; }
+.soft-skills-content li:nth-child(5) { animation-delay: 0.7s; }
+.soft-skills-content li:nth-child(6) { animation-delay: 0.8s; }
+
+.soft-skills-content li:hover {
+  background-color: #1e1e2f;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #151524;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  border-top: 1px solid #2e2e45;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+  
+}
+
+/* Text Animation */
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    margin-bottom: 30px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 2.8rem;
+    margin-top: 0;
+  }
+
+  .role-text,
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .hire-btn {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-width: 90%;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  .career-section {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .career-heading {
+    font-size: 2rem;
+  }
+
+  .career-timeline {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .career-item {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .career-year {
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .connector-line {
+    width: 3px;
+  }
+
+  .skills-map-container {
+    height: auto;
+  }
+
+  .center-node {
+    width: 100px;
+    height: 100px;
+    font-size: 1rem;
+  }
+
+  .skills-divider {
+    display: none;
+  }
+
+  .skill-item {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 50px 30px;
+  }
+
+  .hero-name {
+    font-size: 3.5rem;
+  }
+
+  .hero-image {
+    max-width: 80%;
+  }
+
+  .career-heading {
+    font-size: 2.2rem;
+  }
+
+  .career-item {
+    width: 80%;
+  }
+
+  .skills-map-container {
+    height: 350px;
+  }
+
+  .center-node {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skill-item {
+    width: 60px;
+    height: 60px;
+  }
+
+  .soft-skills-content li {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,264 @@
+.hire-me-section {
+  padding: 40px 10px;
+  background-color: #151524;
+  color: white;
+}
+
+.hire-me-top {
+  text-align: center;
+}
+
+.page-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #ffb627;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+}
+
+.page-subtext {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.hire-content {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.hire-left,
+.hire-right {
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px;
+}
+
+.hire-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-box,
+.contact-icons {
+  background-color: #1e1e2f;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 0 10px #00000050;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+}
+
+.contact-box {
+  display: flex;
+  gap: 15px;
+}
+
+.contact-box .icon {
+  font-size: 34px;
+  color: #ffb627;
+  margin-top: 10px;
+}
+
+.contact-box h4 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.contact-box p {
+  margin: 4px 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.contact-icons {
+  text-align: center;
+}
+
+.contact-icons h4 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-top: -10px;
+}
+
+.contact-icons .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-icons .social-icons img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.contact-icons .social-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.hire-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.hire-right h3 {
+  font-size: 1.8rem;
+  color: #ffb627;
+  margin-top: -28px;
+  text-transform: uppercase;
+}
+
+.message-box {
+  width: 100%;
+  height: 280px;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  resize: none;
+  background-color: #1e1e2f;
+  color: white;
+  margin-top: -30px;
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 106%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebc59;
+}
+
+/* Responsive styles for tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+  .hire-content {
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hire-left,
+  .hire-right {
+    flex: 1;
+    min-width: 100%;
+    max-width: 500px;
+  }
+
+  .hire-left {
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contact-box,
+  .contact-icons {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .hire-right h3 {
+    font-size: 1.5rem;
+    margin-top: -20px;
+  }
+
+  .message-box {
+    height: 200px;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive styles for mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .hire-me-section {
+    padding: 60px 20px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .page-subtext {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .hire-left,
+  .hire-right {
+    flex: 1;
+    min-width: 100%;
+    max-width: 400px;
+  }
+
+  .hire-left {
+    align-items: center;
+    gap: 15px;
+  }
+
+  .hire-right {
+    margin-top: 15px;
+  }
+
+  .contact-box,
+  .contact-icons {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .contact-icons .social-icons {
+    gap: 15px;
+  }
+
+  .contact-icons .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hire-right h3 {
+    font-size: 1.4rem;
+    margin-top: -20px;
+  }
+
+  .message-box {
+    height: 180px;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/* Text Animation */
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

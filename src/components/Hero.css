@@ -1,0 +1,113 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #151524;
+  color: white;
+  padding: 55px 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero-content {
+  max-width: 500px;
+  animation: fadeInText 1.2s ease-in-out;
+  margin-left: 150px;
+}
+
+.hero-name {
+  font-size: 4.2rem;
+  color: #ffffff;
+  margin-bottom: 5px;
+  margin-top: -30px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #ffb627;
+}
+
+.role-text {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-bottom: 2px;
+  line-height: 1.6;
+}
+
+.intro-text {
+  font-size: 1rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.hire-btn {
+  background-color: #ffb627;
+  color: #151524;
+  padding: 12px 44px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.hire-btn:hover {
+  background-color: #ffffff;
+}
+
+.hero-image {
+  max-width: 420px;
+  margin-top: 5px;
+  margin-right: 150px;
+}
+
+.hero-image img {
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* Text Animation */
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    margin-bottom: 30px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 2.8rem;
+    margin-top: 0;
+  }
+
+  .role-text,
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .hire-btn {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-width: 90%;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+}
